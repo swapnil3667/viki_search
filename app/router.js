@@ -5,7 +5,10 @@ var Router = Ember.Router.extend({
   location: config.locationType
 });
 
-Router.map(function() {
-});
 
+Router.map(function() {
+  this.resource('search', {path: '/search'}, function(){
+    this.route('results', {path: ':keyword'});
+  });
+});
 export default Router;

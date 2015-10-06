@@ -1,0 +1,9 @@
+<h2>Result</h2>
+
+<h3>
+<ul>
+{{#each model as |video|}}
+  <li><a {{bind-attr href=video.url }}>{{video.name}}</a></li>
+{{/each}}
+</ul>
+</h3>
